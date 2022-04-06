@@ -4,7 +4,9 @@ import mainReducer from '../reducers'
 
 export const initialState = {
   cart: {
-    products: [],
+    products: [
+      // this should be filled with book objects
+    ],
   },
 }
 
