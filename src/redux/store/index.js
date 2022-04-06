@@ -1,12 +1,16 @@
 import { createStore } from 'redux'
 import mainReducer from '../reducers'
 // this app has to share a cart array
+// now let's also introduce a "user login" feature
 
 export const initialState = {
   cart: {
     products: [
       // this should be filled with book objects
     ],
+  },
+  user: {
+    name: '',
   },
 }
 

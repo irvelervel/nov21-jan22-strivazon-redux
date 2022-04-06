@@ -1,10 +1,11 @@
+import { ADD_TO_CART, REMOVE_FROM_CART, SET_USERNAME } from '../actions'
 import { initialState } from '../store'
 
 const mainReducer = (state = initialState, action) => {
   switch (action.type) {
     // case 'blablabla':
     // return { // the new state... }
-    case 'ADD_TO_CART':
+    case ADD_TO_CART:
       // the action here carries a type but also a payload
       return {
         // the new object we return from ANY case
@@ -20,7 +21,7 @@ const mainReducer = (state = initialState, action) => {
         },
       }
 
-    case 'REMOVE_FROM_CART':
+    case REMOVE_FROM_CART:
       return {
         ...state,
         cart: {
@@ -33,6 +34,15 @@ const mainReducer = (state = initialState, action) => {
           //     ...state.cart.products.slice(0, action.payload),
           //     ...state.cart.products.slice(action.payload + 1),
           //   ],
+        },
+      }
+
+    case SET_USERNAME:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          name: action.payload,
         },
       }
 
